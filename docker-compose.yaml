@@ -1,0 +1,89 @@
+version: '3'
+
+services:
+  zookeeper:
+    image: confluentinc/cp-zookeeper:latest
+    container_name: zookeeper
+    networks:
+      - broker-kafka
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+
+  kafka:
+    image: confluentinc/cp-kafka:latest
+    container_name: kafka
+    networks:
+      - broker-kafka
+    depends_on:
+      - zookeeper
+    ports:
+      - "9092:9092"
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:29092,PLAINTEXT_HOST://localhost:9092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+
+  kafdrop:
+    image: obsidiandynamics/kafdrop:latest
+    container_name: kafdrop
+    networks:
+      - broker-kafka
+    depends_on:
+      - kafka
+    ports:
+      - "19000:9000"
+    environment:
+      KAFKA_BROKERCONNECT: kafka:29092
+
+  postgres:
+    image: 'postgres:13.1-alpine'
+    container_name: postgres
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=1234
+    networks:
+      - broker-kafka
+      
+  keycloak:
+    image: jboss/keycloak
+    container_name: keycloak
+    environment:
+      - KEYCLOAK_USER=admin
+      - KEYCLOAK_PASSWORD=admin
+    ports:
+      - "8180:8080"
+      - "8443:8443"
+    volumes:
+      - ./data:/opt/jboss/keycloak/standalone/data
+   
+  jaeger:
+    image: jaegertracing/all-in-one
+    container_name: jaeger
+    ports:
+      - "16686:16686" # Porta para o painel de visualização do Jaeger
+      - "6831:6831/udp" # Porta para o agente do Jaeger
+    restart: always
+
+  localstack:
+    image: localstack/localstack
+    ports:
+      - "4566:4566" # Porta para o DynamoDB
+      - "4571:4571" # Porta para o SQS
+      - "4572:4572" # Porta para o SNS
+      - "4582:4582" # Porta para o Aurora
+    environment:
+      - SERVICES=dynamodb,aurora,sqs,sns # Serviços que serão iniciados
+      - DEBUG=1 # Ativa o modo de depuração
+      - DATA_DIR=/tmp/localstack/data
+    volumes:
+      - E:\workspaces\ws-br-agro\localstack-data:/tmp/localstack/data
+
+networks:
+  broker-kafka:
+    driver: bridge

@@ -1,0 +1,26 @@
+{
+    "customer": "COFCO (China National Cereals, Oils and Foodstuffs Corporation)",
+    "priceTonne": 2500,
+    "product": "Soja",
+    "tonnes": 800,
+    "country": "China",
+    "proposalValidityDays": 3
+}
+
+{
+    "customer": "Sinochem Group",
+    "priceTonne": 1900,
+    "product": "Arroz",
+    "tonnes": 400,
+    "country": "China",
+    "proposalValidityDays": 5
+}
+
+{
+    "customer": "Yili Group",
+    "priceTonne": 3.353,
+    "product": "Feijão",
+    "tonnes": 150,
+    "country": "China",
+    "proposalValidityDays": 8
+}

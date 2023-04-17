@@ -1,0 +1,9 @@
+2023-04-11 12:36:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "DATABASECHANGELOGLOCK" not found; SQL statement:
+select count(*) from PUBLIC.DATABASECHANGELOGLOCK [42102-197]
+2023-04-11 12:36:56 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Table "DATABASECHANGELOG" not found; SQL statement:
+select count(*) from PUBLIC.DATABASECHANGELOG [42102-197]
+2023-04-11 12:36:57 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Table "DATABASECHANGELOG" not found; SQL statement:
+select count(*) from PUBLIC.DATABASECHANGELOG [42102-197]
