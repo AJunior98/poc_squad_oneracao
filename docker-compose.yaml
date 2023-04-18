@@ -75,10 +75,9 @@ services:
     ports:
       - "4566:4566" # Porta para o DynamoDB
       - "4571:4571" # Porta para o SQS
-      - "4572:4572" # Porta para o SNS
       - "4582:4582" # Porta para o Aurora
     environment:
-      - SERVICES=dynamodb,aurora,sqs,sns # Serviços que serão iniciados
+      - SERVICES=dynamodb,aurora,sqs # Serviços que serão iniciados
       - DEBUG=1 # Ativa o modo de depuração
       - DATA_DIR=/tmp/localstack/data
     volumes:
