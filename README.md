@@ -9,6 +9,9 @@ Está POC tem como objetivo colocar em pratica algumas possiveis ferramentas que
 - Autenticação e autorização: Keycloak
 - Bancos de dados relacional: Postgres
 - Monitoramento distribuído de sistemas: Jaeger
+- Gerenciador de banco de dados: DBeaver
+- IDE: IntelliJ
+- Conteinerização: Docker
 
 ## Requisitos funcionais
 
@@ -137,15 +140,36 @@ O microserviço de cotação, funciona de maneira simples e se comunica com uma 
 
 - Um job busca o valor atualizado do dolar nesta API a cada 35s.
 
-![image](https://user-images.githubusercontent.com/100853329/233149228-e93ae8c6-6aae-4da3-b047-3c66f0ec9c68.png)
+  ![image](https://user-images.githubusercontent.com/100853329/233149228-e93ae8c6-6aae-4da3-b047-3c66f0ec9c68.png)
 
 - Após buscar a nova informação, ele envia uma nova mensagem para o tópico Kafka chamado "Quotation" e grava no banco de dados Postgres.
 
-*Código responsavel por enviar mensagem ao tópico*
-![image](https://user-images.githubusercontent.com/100853329/233149609-956c3de4-b7c0-4e99-9aed-0a2505174147.png)
+  *Código responsavel por enviar mensagem ao tópico*
+  
+  ![image](https://user-images.githubusercontent.com/100853329/233149609-956c3de4-b7c0-4e99-9aed-0a2505174147.png)
 
-*Kafdrop é uma interface gráfica utilizada para facilitar visualização e gerenciamento dos tópicos*
-![image](https://user-images.githubusercontent.com/100853329/233150412-6d5d2d8c-fbdc-4296-9fec-4a16792e3cc8.png)
+  *Kafdrop é uma interface gráfica utilizada para facilitar visualização e gerenciamento dos tópicos*
+  
+  ![image](https://user-images.githubusercontent.com/100853329/233150412-6d5d2d8c-fbdc-4296-9fec-4a16792e3cc8.png)
 
-*DBeaver é utilizado para gerenciamento de banco de dados*
-![image](https://user-images.githubusercontent.com/100853329/233151376-b03c7158-4610-43c5-aed8-f43ac1312c76.png)
+  *DBeaver é utilizado para gerenciamento de banco de dados*
+  
+  ![image](https://user-images.githubusercontent.com/100853329/233151376-b03c7158-4610-43c5-aed8-f43ac1312c76.png)
+
+## Microserviço de propostas
+O microserviço de proposta, recebe as propostas dos clientes e também pode ser acessada pelos gerentes e usuários da AJ Agro, abaixo detalhes:
+
+- Quando o cliente envia uma nova proposta, é salvo no banco de dados as informações da proposta e após isso é enviado para o tópico Proposal.
+
+  *Endpoint responsavel por criar uma nova proposta*
+  
+  ![image](https://user-images.githubusercontent.com/100853329/233160315-debb3bbb-371c-4cdb-8d2b-bdf1f0a0590b.png)
+
+  *Na camada de serviço (responsável por conter as regras de négocio), há dois metodos que são responsaveis por criar e salvar no banco de dados e após isso enviar para o tópico de proposta*
+  
+  ![image](https://user-images.githubusercontent.com/100853329/233168334-d32872aa-19bf-4fe9-afe6-f048d6e78b9f.png)
+
+  *Método responsável por enviar mensagem para o tópico*
+  
+  ![image](https://user-images.githubusercontent.com/100853329/233160158-71bebade-7ee8-491e-82cf-2b4cd54afed1.png)
+
