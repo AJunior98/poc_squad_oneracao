@@ -2,9 +2,5 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/cotacao" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/gateway-bff" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/proposta" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/report" vcs="Git" />
   </component>
 </project>
