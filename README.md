@@ -160,7 +160,20 @@ O microserviço de cotação, funciona de maneira simples e se comunica com uma 
 O microserviço de proposta, recebe as propostas dos clientes e também pode ser acessada pelos gerentes e usuários da AJ Agro, abaixo detalhes:
 
 - Quando o cliente envia uma nova proposta, é salvo no banco de dados as informações da proposta e após isso é enviado para o tópico Proposal.
-
+  
+  *Payload enviado pelo cliente*
+  
+  ```
+  {
+    "customer": "Sinochem Group",
+    "priceTonne": 1900,
+    "product": "Arroz",
+    "tonnes": 2000,
+    "country": "China",
+    "proposalValidityDays": 2
+  }
+  ```
+  
   *Endpoint responsavel por criar uma nova proposta.*
   
   ![image](https://user-images.githubusercontent.com/100853329/233160315-debb3bbb-371c-4cdb-8d2b-bdf1f0a0590b.png)
@@ -172,4 +185,66 @@ O microserviço de proposta, recebe as propostas dos clientes e também pode ser
   *Método responsável por enviar mensagem para o tópico.*
   
   ![image](https://user-images.githubusercontent.com/100853329/233160158-71bebade-7ee8-491e-82cf-2b4cd54afed1.png)
+  
+  *Mensagem enviada para o tópico*
+  
+  ![image](https://user-images.githubusercontent.com/100853329/233375011-c22325ba-1b5a-4dd5-88aa-5c6e0616f5e6.png)
+  
+  *Dado salvo no banco de dados*
+  
+  ![image](https://user-images.githubusercontent.com/100853329/233375273-93f6b339-355a-4b1c-bc23-de7b6be60677.png)
+  
+## Microserviço de report
+O microserviço de repot, recebe as propostas e as cotações atualizadas dos tópicos Kafka, abaixo mais detalhes:
 
+  - Ao fazer o consumo das mensagens do tópico de cotação, ele persiste em um banco de dados proprio o valor atualizado.
+  
+    *Consumo das mensagens do tópico de cotação*
+  
+    ![image](https://user-images.githubusercontent.com/100853329/233376971-ebf9b36e-51cd-424d-ba46-050a8ad425b3.png)
+  
+    *Persistência no banco de dados*
+  
+    ![image](https://user-images.githubusercontent.com/100853329/233377079-25664250-af45-4240-b671-2b7e7bdec9bb.png)
+    
+    *Imagem do valor do dolar persistido no banco de dados*
+    
+    ![image](https://user-images.githubusercontent.com/100853329/233378442-b1a58275-3dc9-4e8c-b6fe-bbb39ca511c2.png)
+
+    
+  - Ao fazer o consumo das mensagens do tópico de proposta, o microserviço faz a construção de uma proposta com o valor do dolar atualizado, e salva no banco de dados, com isso, posteriormente será possivel emitir relatórios.
+  
+    *Consumo das mensagens do tópico de proposta*
+    
+    ![image](https://user-images.githubusercontent.com/100853329/233377856-ccb0533b-06fd-49cc-98ce-aabdf08b6d82.png)
+
+    *Construção da proposta que será persistida no banco de dados com o valor do dolar atualizado*
+    
+    ![image](https://user-images.githubusercontent.com/100853329/233378128-c7a14111-88b6-4059-a00d-d6125c8bdf94.png)
+    
+    *Imagem da nova oportunidade persistida no banco de dados*
+    
+    ![image](https://user-images.githubusercontent.com/100853329/233378621-04d96d46-8bfc-4890-ac4b-ca2c91ca626f.png)
+    
+## Gateway
+O gateway é responsável por osquestrar os endpoints, quando é realizada uma requisição é encaminhado para o microserviço correto. Isso facilita bastante na documentação dos endpoints, pois ficam centralizados.
+
+  - Abaixo, a imagem da configuração dos clients que encaminham as requisições:
+  
+    *Configuração do microserviço de proposta*
+  
+    ![image](https://user-images.githubusercontent.com/100853329/233379684-61592953-145c-4d61-8f36-06faf480f9f0.png)
+
+    *Configuração do microserviço de report*
+  
+    ![image](https://user-images.githubusercontent.com/100853329/233379785-e34243fd-134b-4b99-8686-749495c16d8c.png)
+
+  - Para gerar os relatórios em CSV foi utilizada uma biblioteca chamada CSVHelper:
+  
+    *Dependência utilizada*
+  
+    ![image](https://user-images.githubusercontent.com/100853329/233380767-a28c6157-220f-4447-99a3-3734e4352bea.png)  
+  
+    *Configuração da classe que gera os relatórios*
+  
+    ![image](https://user-images.githubusercontent.com/100853329/233380434-c9e56ac6-5214-4dfe-a348-3d88946fbf9d.png)
