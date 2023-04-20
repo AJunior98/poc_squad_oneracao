@@ -39,15 +39,15 @@ public class ProposalServiceImpl implements ProposalService {
 
     @Override
     @Transactional
-    public void createNewProposal(ProposalDetailsDTO proposalDetailsDTO) {
-        ProposalDTO proposal = buildAndSaveNewProposal(proposalDetailsDTO);
-        kafkaEvent.sendNewKafkaEvent(proposal);
+    public void removeProposal(long id) {
+        proposalRepository.deleteById(id);
     }
 
     @Override
     @Transactional
-    public void removeProposal(long id) {
-        proposalRepository.deleteById(id);
+    public void createNewProposal(ProposalDetailsDTO proposalDetailsDTO) {
+        ProposalDTO proposal = buildAndSaveNewProposal(proposalDetailsDTO);
+        kafkaEvent.sendNewKafkaEvent(proposal);
     }
 
     @Transactional
