@@ -1,4 +1,4 @@
-package org.br.agro.dto;
+package org.br.agro.application.web.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

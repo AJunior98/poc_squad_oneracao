@@ -14,6 +14,11 @@
         <quarkus.platform.artifact-id>quarkus-bom</quarkus.platform.artifact-id>
         <quarkus.platform.group-id>io.quarkus.platform</quarkus.platform.group-id>
         <quarkus.platform.version>2.16.6.Final</quarkus.platform.version>
+        <!--        Configurações do DynamoDB-->
+        <awssdk.version>1.12.201</awssdk.version>
+        <dynamodblocal.version>1.15.0</dynamodblocal.version>
+        <!--        Configurações do DynamoDB-->
+        <modelmapper.version>3.1.0</modelmapper.version>
         <skipITs>true</skipITs>
         <surefire-plugin.version>3.0.0-M7</surefire-plugin.version>
     </properties>
@@ -26,6 +31,16 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+            <!--        Configurações do DynamoDB-->
+            <dependency>
+                <groupId>com.amazonaws</groupId>
+                <artifactId>aws-java-sdk-bom</artifactId>
+                <version>${awssdk.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!--        Configurações do DynamoDB-->
+
         </dependencies>
     </dependencyManagement>
     <dependencies>
@@ -64,6 +79,23 @@
             <artifactId>lombok</artifactId>
             <version>1.18.24</version>
             <scope>provided</scope>
+        </dependency>
+        <!--        Dependências do DynamoDB-->
+        <dependency>
+            <groupId>com.amazonaws</groupId>
+            <artifactId>aws-java-sdk-dynamodb</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.amazonaws</groupId>
+            <artifactId>DynamoDBLocal</artifactId>
+            <version>${dynamodblocal.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <!--        Dependências do DynamoDB-->
+        <dependency>
+            <groupId>org.modelmapper</groupId>
+            <artifactId>modelmapper</artifactId>
+            <version>${modelmapper.version}</version>
         </dependency>
         <dependency>
             <groupId>org.mockito</groupId>
@@ -168,4 +200,14 @@
             </properties>
         </profile>
     </profiles>
+    <!--    Repositorio de configuração DynamoDB-->
+    <repositories>
+        <repository>
+            <id>dynamodb-local</id>
+            <name>DynamoDB Local Release Repository</name>
+            <url>https://s3-us-west-2.amazonaws.com/dynamodb-local/release</url>
+        </repository>
+    </repositories>
+    <!--    Repositorio de configuração DynamoDB-->
+
 </project>

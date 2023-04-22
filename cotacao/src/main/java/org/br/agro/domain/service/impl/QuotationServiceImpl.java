@@ -1,12 +1,13 @@
-package org.br.agro.service.impl;
+package org.br.agro.domain.service.impl;
 
-import org.br.agro.client.CurrencyPriceClient;
-import org.br.agro.dto.CurrencyPriceDTO;
-import org.br.agro.dto.QuotationDTO;
-import org.br.agro.entity.QuotationEntity;
-import org.br.agro.message.KafkaEvents;
-import org.br.agro.repository.QuotationRepository;
-import org.br.agro.service.QuotationService;
+import org.br.agro.domain.entity.Quotation;
+import org.br.agro.domain.service.QuotationService;
+import org.br.agro.application.web.client.CurrencyPriceClient;
+import org.br.agro.application.web.dto.CurrencyPriceDTO;
+import org.br.agro.application.web.dto.QuotationDTO;
+import org.br.agro.infra.entity.QuotationEntity;
+import org.br.agro.infra.message.KafkaEvents;
+import org.br.agro.infra.repository.QuotationRepository;
 import org.eclipse.microprofile.rest.client.inject.RestClient;
 
 import javax.enterprise.context.ApplicationScoped;
@@ -41,22 +42,17 @@ public class QuotationServiceImpl implements QuotationService {
         }
     }
 
-    @Override
-    public void cleanDataBase(){
-        quotationRepository.deleteAll();
-    }
-
     private boolean updateCurrentInfoPrice(CurrencyPriceDTO currencyPriceInfo) {
         BigDecimal currentPrice = new BigDecimal(currencyPriceInfo.getUSDBRL().getBid());
         boolean updatePrice = false;
 
-        List<QuotationEntity> quotationList = quotationRepository.findAll().list();
+        List<Quotation> quotationList = quotationRepository.findAll();
 
         if(quotationList.isEmpty()){
             saveQuotation(currencyPriceInfo);
             updatePrice = true;
         } else {
-            QuotationEntity lastDollarPrice = quotationList
+            Quotation lastDollarPrice = quotationList
                     .get(quotationList.size() -1);
             if(currentPrice.floatValue() != lastDollarPrice.getCurrencyPrice().floatValue()){
                 updatePrice = true;
@@ -67,14 +63,14 @@ public class QuotationServiceImpl implements QuotationService {
     }
 
     private void saveQuotation(CurrencyPriceDTO currencyInfo){
-        QuotationEntity quotation = new QuotationEntity();
+        Quotation quotation = new Quotation();
 
         quotation.setDate(new Date());
         quotation.setCurrencyPrice(new BigDecimal(currencyInfo.getUSDBRL().getBid()));
         quotation.setPctChange(currencyInfo.getUSDBRL().getPctChange());
         quotation.setPair("USD-BRL");
 
-        quotationRepository.persist(quotation);
+        quotationRepository.save(quotation);
     }
 
 }

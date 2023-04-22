@@ -72,16 +72,15 @@ services:
 
   localstack:
     image: localstack/localstack
+    container_name: localstack
     ports:
-      - "4566:4566" # Porta para o DynamoDB
-      - "4571:4571" # Porta para o SQS
-      - "4582:4582" # Porta para o Aurora
+      - "4566:4566"
     environment:
-      - SERVICES=dynamodb,aurora,sqs # Serviços que serão iniciados
-      - DEBUG=1 # Ativa o modo de depuração
+      - SERVICES=dynamodb
+      - DEBUG=1
       - DATA_DIR=/tmp/localstack/data
     volumes:
-      - E:\workspaces\ws-br-agro\localstack-data:/tmp/localstack/data
+      - "./localstack:/tmp/localstack"
 
 networks:
   broker-kafka:

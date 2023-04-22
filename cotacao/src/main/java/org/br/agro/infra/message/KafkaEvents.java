@@ -1,6 +1,6 @@
-package org.br.agro.message;
+package org.br.agro.infra.message;
 
-import org.br.agro.dto.QuotationDTO;
+import org.br.agro.application.web.dto.QuotationDTO;
 import org.eclipse.microprofile.reactive.messaging.Channel;
 import org.eclipse.microprofile.reactive.messaging.Emitter;
 import org.slf4j.Logger;

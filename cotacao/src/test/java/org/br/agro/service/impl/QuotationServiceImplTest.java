@@ -2,10 +2,10 @@ package org.br.agro.service.impl;
 
 import io.quarkus.test.junit.QuarkusTest;
 import io.quarkus.test.junit.mockito.InjectMock;
-import org.br.agro.client.CurrencyPriceClient;
-import org.br.agro.dto.CurrencyPriceDTO;
-import org.br.agro.dto.USDBRL;
-import org.br.agro.utils.ConversorObjUtils;
+import org.br.agro.application.web.client.CurrencyPriceClient;
+import org.br.agro.application.web.dto.CurrencyPriceDTO;
+import org.br.agro.application.web.dto.USDBRL;
+import org.br.agro.infra.utils.ConversorObjUtils;
 import org.eclipse.microprofile.rest.client.inject.RestClient;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;

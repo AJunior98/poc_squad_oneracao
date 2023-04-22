@@ -1,9 +1,9 @@
-package org.br.agro.service;
+package org.br.agro.domain.service;
 
 public interface QuotationService {
 
     void getCurrencyPrice();
 
-    void cleanDataBase();
+//    void cleanDataBase();
 
 }

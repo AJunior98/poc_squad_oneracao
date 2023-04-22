@@ -1,4 +1,4 @@
-package org.br.agro.utils;
+package org.br.agro.infra.utils;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;

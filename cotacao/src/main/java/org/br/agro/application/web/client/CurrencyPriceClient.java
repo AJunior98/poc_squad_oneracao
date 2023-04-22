@@ -1,6 +1,6 @@
-package org.br.agro.client;
+package org.br.agro.application.web.client;
 
-import org.br.agro.dto.CurrencyPriceDTO;
+import org.br.agro.application.web.dto.CurrencyPriceDTO;
 import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
 
 import javax.enterprise.context.ApplicationScoped;
