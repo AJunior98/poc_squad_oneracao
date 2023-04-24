@@ -3,24 +3,24 @@ package org.br.agro.infra.config;
 import io.smallrye.config.ConfigMapping;
 import io.smallrye.config.WithName;
 
-@ConfigMapping(prefix = "aws.dynamodb")
+@ConfigMapping(prefix = "quarkus.dynamodb")
 public interface AwsDynamoDBConfigurationProperties {
 
-    @WithName("endpoint")
+    @WithName("endpoint-override")
     String endpoint();
 
-    @WithName("region")
+    @WithName("aws.region")
     String region();
 
-    @WithName("credentials")
+    @WithName("aws.credentials")
     DynamoDbCredentialsProperties credentials();
 
 
     interface DynamoDbCredentialsProperties {
-        @WithName("access-key")
+        @WithName("static-provider.access-key-id")
         String accessKey();
 
-        @WithName("secret-key")
+        @WithName("static-provider.secret-access-key")
         String secretKey();
     }
 

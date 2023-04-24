@@ -91,6 +91,10 @@
             <version>${dynamodblocal.version}</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-apache-httpclient</artifactId>
+        </dependency>
         <!--        Dependências do DynamoDB-->
         <dependency>
             <groupId>org.modelmapper</groupId>

@@ -3,7 +3,7 @@ package org.br.agro.domain.entity;
 import lombok.*;
 
 import java.math.BigDecimal;
-import java.util.Date;
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 @AllArgsConstructor
@@ -16,7 +16,7 @@ public class Quotation {
 
     private UUID id;
 
-    private Date date;
+    private LocalDateTime date;
 
     private BigDecimal currencyPrice;
 
