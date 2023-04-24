@@ -248,3 +248,24 @@ O gateway é responsável por osquestrar os endpoints, quando é realizada uma r
     *Configuração da classe que gera os relatórios*
   
     ![image](https://user-images.githubusercontent.com/100853329/233380434-c9e56ac6-5214-4dfe-a348-3d88946fbf9d.png)
+    
+# Imagens adicionais
+
+*Documentação do OpenAPI no Gateway*
+
+![image](https://user-images.githubusercontent.com/100853329/233998253-2d5002dd-1e06-483c-8958-0be921960c42.png)
+
+*Imagem ilustrando o funcionamento do Jaeger*
+
+![image](https://user-images.githubusercontent.com/100853329/233998561-b0729cd0-87bc-4a0d-8193-cc6d6ad90be2.png)
+
+*Obtendo token para acessar os microserviços*
+
+![image](https://user-images.githubusercontent.com/100853329/233998671-49ed34b2-1f7e-4df3-8571-3d0346277756.png)
+
+*Envio do payload*
+
+![image](https://user-images.githubusercontent.com/100853329/233998820-ee5fb2ec-4028-4be1-bb85-1fa2cc620d7f.png)
+
+
+
