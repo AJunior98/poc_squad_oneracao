@@ -4,6 +4,6 @@ public interface QuotationService {
 
     void getCurrencyPrice();
 
-//    void cleanDataBase();
+    void cleanDataBase();
 
 }
