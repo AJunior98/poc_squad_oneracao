@@ -4,17 +4,35 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53f41b90-0d84-43e8-b5ee-e1435acd7c43" name="Changes" comment="Ajuste na imagem da arquitetura">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="53f41b90-0d84-43e8-b5ee-e1435acd7c43" name="Changes" comment="Ajuste na ordem dos metodos para fins de apresentação">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_24_04_2023_09_34__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_24_04_2023_09_34__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proposta/src/main/java/org/br/agro/service/impl/ProposalServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/proposta/src/main/java/org/br/agro/service/impl/ProposalServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cotacao/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cotacao/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cotacao/src/main/java/org/br/agro/domain/entity/Quotation.java" beforeDir="false" afterPath="$PROJECT_DIR$/cotacao/src/main/java/org/br/agro/domain/entity/Quotation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cotacao/src/main/java/org/br/agro/domain/service/impl/QuotationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cotacao/src/main/java/org/br/agro/domain/service/impl/QuotationServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cotacao/src/main/java/org/br/agro/infra/config/AwsDynamoDBConfigurationProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/cotacao/src/main/java/org/br/agro/infra/config/AwsDynamoDBConfigurationProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cotacao/src/main/java/org/br/agro/infra/entity/QuotationEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/cotacao/src/main/java/org/br/agro/infra/entity/QuotationEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cotacao/src/main/java/org/br/agro/infra/entity/converter/DateConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/cotacao/src/main/java/org/br/agro/infra/entity/converter/LocalDateTimeConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cotacao/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/cotacao/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
@@ -45,8 +63,10 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;TODO_SCOPE&quot;: &quot;All Places&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/poc-squad-oneracao/cotacao/src/main/java/org/br/agro/domain&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -56,7 +76,13 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Quarkus.report">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\poc-squad-oneracao\cotacao\src\main\java\org\br\agro\domain" />
+      <recent name="E:\poc-squad-oneracao\cotacao\src\main\java\org\br\agro\infra" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Quarkus.cotacao">
     <configuration name="cotacao" type="QuarkusRunConfigurationType" factoryName="Quarkus" nameIsGenerated="true">
       <module name="cotacao" />
       <QsMavenRunConfiguration>
@@ -219,7 +245,9 @@
       <workItem from="1681825112990" duration="555000" />
       <workItem from="1681909194695" duration="1251000" />
       <workItem from="1681910596908" duration="5875000" />
-      <workItem from="1681993574086" duration="3853000" />
+      <workItem from="1681993574086" duration="9384000" />
+      <workItem from="1682086572390" duration="3188000" />
+      <workItem from="1682174488456" duration="6395000" />
     </task>
     <task id="LOCAL-00001" summary="Ajuste de erro de concorrência">
       <created>1681734749455</created>
@@ -270,7 +298,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681910779640</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Ajuste na ordem dos metodos para fins de apresentação">
+      <created>1682000203271</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1682000203271</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -281,7 +316,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="Issue#2" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -299,26 +346,12 @@
     <MESSAGE value="Ajuste do README" />
     <MESSAGE value="Ajuste no desenho de arquitetura" />
     <MESSAGE value="Ajuste na imagem da arquitetura" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajuste na imagem da arquitetura" />
+    <MESSAGE value="Ajuste na ordem dos metodos para fins de apresentação" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajuste na ordem dos metodos para fins de apresentação" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/cotacao/src/main/java/org/br/agro/service/impl/QuotationServiceImpl.java</url>
-          <line>32</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/cotacao/src/main/java/org/br/agro/scheduler/QuotationScheduler.java</url>
-          <line>23</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/cotacao/src/main/java/org/br/agro/scheduler/QuotationScheduler.java</url>
-          <line>20</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/proposta/src/main/java/org/br/agro/controller/ProposalController.java</url>
           <line>38</line>
@@ -329,13 +362,40 @@
           <line>30</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/cotacao/src/main/java/org/br/agro/client/CurrencyPriceClient.java</url>
-          <line>17</line>
-          <properties class="org.br.agro.client.CurrencyPriceClient" method="getPriceByPair">
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="4" />
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/cotacao/src/main/java/org/br/agro/infra/repository/impl/QuotationRepositoryImpl.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/cotacao/src/main/java/org/br/agro/infra/repository/impl/QuotationRepositoryImpl.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/cotacao/src/main/java/org/br/agro/domain/service/impl/QuotationServiceImpl.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/cotacao/src/main/java/org/br/agro/domain/service/impl/QuotationServiceImpl.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/cotacao/src/main/java/org/br/agro/domain/service/impl/QuotationServiceImpl.java</url>
+          <line>67</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/cotacao/src/main/java/org/br/agro/infra/config/AmazonDynamoDBConfiguration.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/cotacao/src/main/java/org/br/agro/infra/repository/impl/QuotationRepositoryImpl.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="17" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
