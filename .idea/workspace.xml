@@ -6,14 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="53f41b90-0d84-43e8-b5ee-e1435acd7c43" name="Changes" comment="Ajuste na ordem dos metodos para fins de apresentação">
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_24_04_2023_09_34__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_24_04_2023_09_34__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_24_04_2023_14_18__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_24_04_2023_14_18__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cotacao/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cotacao/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cotacao/src/main/java/org/br/agro/domain/entity/Quotation.java" beforeDir="false" afterPath="$PROJECT_DIR$/cotacao/src/main/java/org/br/agro/domain/entity/Quotation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cotacao/src/main/java/org/br/agro/domain/service/QuotationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cotacao/src/main/java/org/br/agro/domain/service/QuotationService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cotacao/src/main/java/org/br/agro/domain/service/impl/QuotationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cotacao/src/main/java/org/br/agro/domain/service/impl/QuotationServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cotacao/src/main/java/org/br/agro/infra/config/AwsDynamoDBConfigurationProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/cotacao/src/main/java/org/br/agro/infra/config/AwsDynamoDBConfigurationProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cotacao/src/main/java/org/br/agro/infra/entity/QuotationEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/cotacao/src/main/java/org/br/agro/infra/entity/QuotationEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cotacao/src/main/java/org/br/agro/infra/entity/converter/DateConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/cotacao/src/main/java/org/br/agro/infra/entity/converter/LocalDateTimeConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cotacao/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/cotacao/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cotacao/src/main/java/org/br/agro/infra/repository/QuotationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/cotacao/src/main/java/org/br/agro/infra/repository/QuotationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cotacao/src/main/java/org/br/agro/infra/repository/impl/QuotationRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cotacao/src/main/java/org/br/agro/infra/repository/impl/QuotationRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cotacao/src/main/java/org/br/agro/infra/scheduler/QuotationScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/cotacao/src/main/java/org/br/agro/infra/scheduler/QuotationScheduler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -363,16 +362,6 @@
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/cotacao/src/main/java/org/br/agro/infra/repository/impl/QuotationRepositoryImpl.java</url>
-          <line>38</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/cotacao/src/main/java/org/br/agro/infra/repository/impl/QuotationRepositoryImpl.java</url>
-          <line>45</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/cotacao/src/main/java/org/br/agro/domain/service/impl/QuotationServiceImpl.java</url>
           <line>35</line>
           <option name="timeStamp" value="13" />
@@ -394,8 +383,18 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/cotacao/src/main/java/org/br/agro/infra/repository/impl/QuotationRepositoryImpl.java</url>
-          <line>30</line>
-          <option name="timeStamp" value="17" />
+          <line>45</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/cotacao/src/main/java/org/br/agro/infra/scheduler/QuotationScheduler.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/cotacao/src/main/java/org/br/agro/domain/service/impl/QuotationServiceImpl.java</url>
+          <line>79</line>
+          <option name="timeStamp" value="20" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

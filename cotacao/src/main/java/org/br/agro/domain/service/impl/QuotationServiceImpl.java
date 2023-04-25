@@ -75,4 +75,9 @@ public class QuotationServiceImpl implements QuotationService {
         quotationRepository.save(quotation);
     }
 
+    @Override
+    public void cleanDataBase(){
+        quotationRepository.deleteAll();
+    }
+
 }

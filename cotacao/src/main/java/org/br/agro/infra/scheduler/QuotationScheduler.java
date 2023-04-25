@@ -17,6 +17,9 @@ public class QuotationScheduler {
     @Inject
     QuotationServiceImpl quotationServiceImpl;
 
+    //Podemos usar o identificador para poder cancelar facilmente o scheduled, por exemplo
+    //boolean cancelled = scheduledExecutorService.cancel("task-job");
+
     @Transactional
     @Scheduled(every = "35s", identity="task-job")
     void schedule(){
@@ -29,11 +32,11 @@ public class QuotationScheduler {
     // Neste exemplo, estamos agendando o job para executar todos os dias às 22:00,
     // definindo "0" para segundos e minutos, "22" para horas, e o caractere "*" para os outros campos, indicando que não há restrições.
 
-//    @Transactional
-//    @Scheduled(cron = "0 0 22 * * ?")
-//    void scheduleDeleteAll(){
-//        LOG.info("-- Executando scheduler para limpeza do banco Quotation --");
-//        quotationServiceImpl.cleanDataBase();
-//    }
+    @Transactional
+    @Scheduled(cron = "0 0 22 * * ?")
+    void scheduleDeleteAll(){
+        LOG.info("-- Executando scheduler para limpeza do banco Quotation --");
+        quotationServiceImpl.cleanDataBase();
+    }
 
 }
