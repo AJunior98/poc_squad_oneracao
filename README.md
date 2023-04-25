@@ -12,6 +12,7 @@ Está POC tem como objetivo colocar em pratica algumas possiveis ferramentas que
 - Gerenciador de banco de dados: DBeaver
 - IDE: IntelliJ
 - Conteinerização: Docker
+- AWS (Utilizando LocalStack): DynamoDB
 
 ## Requisitos funcionais
 
