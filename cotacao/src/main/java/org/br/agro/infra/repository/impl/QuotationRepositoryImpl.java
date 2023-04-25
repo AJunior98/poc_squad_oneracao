@@ -42,6 +42,13 @@ public class QuotationRepositoryImpl implements QuotationRepository {
     }
 
     @Override
+    public void deleteAll() {
+        var scan = new DynamoDBScanExpression();
+        List<QuotationEntity> listScan = dynamoDBMapper.scan(QuotationEntity.class, scan);
+        listScan.forEach(dynamoDBMapper::delete);
+    }
+
+    @Override
     public List<Quotation> findAll() {
         var scan = new DynamoDBScanExpression();
         var listScan = dynamoDBMapper.scan(QuotationEntity.class, scan);

@@ -17,6 +17,9 @@ public class QuotationScheduler {
     @Inject
     QuotationServiceImpl quotationServiceImpl;
 
+    //Podemos usar o identificador para poder cancelar facilmente o scheduled, por exemplo
+    //boolean cancelled = scheduledExecutorService.cancel("task-job");
+
     @Transactional
     @Scheduled(every = "35s", identity="task-job")
     void schedule(){

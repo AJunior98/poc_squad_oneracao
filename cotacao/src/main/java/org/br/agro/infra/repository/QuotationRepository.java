@@ -10,5 +10,7 @@ public interface QuotationRepository {
     Quotation save(Quotation quotation);
     void delete(UUID id);
     List<Quotation> findAll();
+    void deleteAll();
+
 
 }
