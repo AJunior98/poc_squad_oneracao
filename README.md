@@ -41,7 +41,7 @@ O fluxo basico é:
 
 ## Desenho de arquitetura proposto
 
-![image](https://user-images.githubusercontent.com/100853329/233153626-fa30d7e2-1176-4643-8e4b-c25baed78216.png)
+![image](https://user-images.githubusercontent.com/100853329/234282806-0ea06eec-a0d1-4ecb-9e5f-f611b64aac15.png)
 
 # Arquivos e configurações
 
