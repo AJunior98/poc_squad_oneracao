@@ -99,8 +99,6 @@ services:
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=1234
-    networks:
-      - broker-kafka
       
   keycloak:
     image: jboss/keycloak
@@ -121,6 +119,18 @@ services:
       - "16686:16686" # Porta para o painel de visualização do Jaeger
       - "6831:6831/udp" # Porta para o agente do Jaeger
     restart: always
+
+  localstack:
+    image: localstack/localstack
+    container_name: localstack
+    ports:
+      - "4566:4566"
+    environment:
+      - SERVICES=dynamodb
+      - DEBUG=1
+      - DATA_DIR=/tmp/localstack/data
+    volumes:
+      - "./localstack:/tmp/localstack"
 
 networks:
   broker-kafka:
