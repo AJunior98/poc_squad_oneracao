@@ -39,10 +39,6 @@ O fluxo basico é:
 
 2 - A equipe de tecnologia da AJ Agro pretende migrar suas aplicações para a plataforma de nuvem e desenvolver novas API's e aplicações prontas para operar em um ambiente de computação em nuvem.
 
-## Desenho de arquitetura proposto
-
-![image](https://user-images.githubusercontent.com/100853329/234282806-0ea06eec-a0d1-4ecb-9e5f-f611b64aac15.png)
-
 # Arquivos e configurações
 
 Abaixo alguns arquivos e configurações que foram utilizados no projeto.
