@@ -164,10 +164,10 @@ quarkus.log.console.format = %d{HH:mm:ss} %-5p traceId=%X{traceId}, parentId=%X{
 # Implementando testes unitários
 [EM_CONSTRUÇÃO]
 
-## Prints do funcionamento da aplicação
+# Prints do funcionamento da aplicação
 Abaixo os prints de como está funcionando a aplicação.
 
-# DynamoDB com LocalStack
+## DynamoDB com LocalStack
 - Ao iniciar o LocalStack, você pode acompanhar os logs do mesmo via Docker-desktop.
 
   ![image](https://user-images.githubusercontent.com/100853329/236321488-ef36dd44-7f41-46bc-a43b-578fcdec3b36.png)
@@ -193,11 +193,55 @@ Abaixo os prints de como está funcionando a aplicação.
 ## Configurações do DynamoDB no projeto
 - Existem algumas annotations para identificar os atributos do documento que você deseja guardar.
 
-![image](https://user-images.githubusercontent.com/100853329/236323459-42fe85af-acee-48c7-a05a-7cd5000b5604.png)
+  ![image](https://user-images.githubusercontent.com/100853329/236323459-42fe85af-acee-48c7-a05a-7cd5000b5604.png)
 
 - Implementação do repository 
 
-![image](https://user-images.githubusercontent.com/100853329/236323518-1e57f274-e4c3-4043-bd64-9d3d821d80e9.png)
+  ![image](https://user-images.githubusercontent.com/100853329/236323518-1e57f274-e4c3-4043-bd64-9d3d821d80e9.png)
+
+## Funcionamento do Jaeger
+Basicamente o Jaeger está olhando para o gateway e os 2 microserviços (proposta e report), abaixo detalhes:
+- No cenario abaixo, estou tentando criar uma proposta, enviei uma requisição para o microserviço de proposta via gateway, a ideia é que o Jaeger, observe e me traga informações sobre o funcionamento do microserviço.
+
+  *Abaixo podemos ver o horario que aconteceu a requisição, quais microserviços foram chamados e em quanto tempo aconteceu a requisição*
+
+  ![image](https://user-images.githubusercontent.com/100853329/236325674-ecc02f8a-f361-41b9-8066-d84f096e432b.png)
+
+  *Se abrirmos a requisição observada pelo Jaeger teremos mais informações*
+
+  ![image](https://user-images.githubusercontent.com/100853329/236326471-0150274f-4a4f-4ea8-b887-7a4b7eebb3a2.png)
+  
+  
+   *Há mais alguns detalhes, que podem ser observados ao abrir mais a visão de casa um microserviço chamado*
+ 
+  ![image](https://user-images.githubusercontent.com/100853329/236326709-e6d65c11-398b-4b56-a76b-0903abf55580.png)
+  
+- Neste segundo cénario, realizei uma outra requisição, mas agora fiz um GET na proposta que criei
+
+  *Na interface do Jaeger, apareceu as duas requisições que foram realizadas*
+  
+  ![image](https://user-images.githubusercontent.com/100853329/236327472-cab5b63e-544a-4901-a7f9-55c49942f15f.png)
+
+  *Eu consigo comparar as requisições afim de análise*
+  
+  ![image](https://user-images.githubusercontent.com/100853329/236327610-ba2bf58d-e75a-429b-9966-069cb4f297d0.png)
+
+- Neste cénario abaixo, desliguei o microserviço de proposta, para verificar como o Jaeger se comporta, abaixo os detalhes:
+
+  *Na interface, aparece a requisição com erro*
+  
+  ![image](https://user-images.githubusercontent.com/100853329/236328160-b8fda997-cc75-43d7-83a3-c58f9fdca6a8.png)
+  
+  *Ao abrir para verificar os detalhes, o Jaeger me informa o problema*
+  
+  ![image](https://user-images.githubusercontent.com/100853329/236328383-07434385-af92-4cb2-803e-bc0c81ef5155.png)
+
+
+
+
+
+
+
 
 
 
