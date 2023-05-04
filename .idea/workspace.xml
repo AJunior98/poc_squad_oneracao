@@ -4,15 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53f41b90-0d84-43e8-b5ee-e1435acd7c43" name="Changes" comment="Ajuste na ordem dos metodos para fins de apresentação">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_24_04_2023_09_34__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_24_04_2023_09_34__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_24_04_2023_14_18__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_24_04_2023_14_18__Changes_.xml" afterDir="false" />
+    <list default="true" id="53f41b90-0d84-43e8-b5ee-e1435acd7c43" name="Changes" comment="Ajustando gateway">
+      <change afterPath="$PROJECT_DIR$/proposta/src/test/java/org/br/agro/controller/ProposalControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proposta/src/test/java/org/br/agro/util/AccessTokenProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proposta/src/test/resources/ajagro-realm.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cotacao/src/main/java/org/br/agro/domain/service/QuotationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cotacao/src/main/java/org/br/agro/domain/service/QuotationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cotacao/src/main/java/org/br/agro/domain/service/impl/QuotationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cotacao/src/main/java/org/br/agro/domain/service/impl/QuotationServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cotacao/src/main/java/org/br/agro/infra/repository/QuotationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/cotacao/src/main/java/org/br/agro/infra/repository/QuotationRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cotacao/src/main/java/org/br/agro/infra/repository/impl/QuotationRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cotacao/src/main/java/org/br/agro/infra/repository/impl/QuotationRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cotacao/src/main/java/org/br/agro/infra/scheduler/QuotationScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/cotacao/src/main/java/org/br/agro/infra/scheduler/QuotationScheduler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/payload-teste.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/quarkus-realm.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/kernel/process-uuid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/keycloak.lock.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/keycloak.mv.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/keycloak.trace.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/tx-object-store/ShadowNoFileLockStore/defaultStore/EISNAME/0_ffffac130002_5952fb4_64355461_20" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/org/br/agro/controller/ProposalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/org/br/agro/controller/ProposalController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proposta/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/proposta/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proposta/src/main/java/org/br/agro/controller/ProposalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/proposta/src/main/java/org/br/agro/controller/ProposalController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proposta/src/main/java/org/br/agro/dto/ProposalDetailsDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/proposta/src/main/java/org/br/agro/dto/ProposalDetailsDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proposta/src/main/java/org/br/agro/entity/ProposalEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/proposta/src/main/java/org/br/agro/entity/ProposalEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proposta/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/proposta/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +35,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JUnit5 Test Class" />
         <option value="Class" />
       </list>
     </option>
@@ -65,23 +79,62 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;TODO_SCOPE&quot;: &quot;All Places&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/poc-squad-oneracao/cotacao/src/main/java/org/br/agro/domain&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/poc-squad-oneracao/proposta/src/test/resources&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.25862068&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\poc-squad-oneracao\proposta\src\test\resources" />
       <recent name="E:\poc-squad-oneracao\cotacao\src\main\java\org\br\agro\domain" />
       <recent name="E:\poc-squad-oneracao\cotacao\src\main\java\org\br\agro\infra" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="org.br.agro.controller" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.br.agro.util" />
+    </key>
   </component>
-  <component name="RunManager" selected="Quarkus.cotacao">
+  <component name="RunManager" selected="JUnit.ProposalControllerTest.createProposalTest">
+    <configuration name="ProposalControllerTest.createProposalTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="proposta" />
+      <shortenClasspath name="ARGS_FILE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.br.agro.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.br.agro.controller" />
+      <option name="MAIN_CLASS_NAME" value="org.br.agro.controller.ProposalControllerTest" />
+      <option name="METHOD_NAME" value="createProposalTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <shortenClasspath name="ARGS_FILE" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="cotacao" type="QuarkusRunConfigurationType" factoryName="Quarkus" nameIsGenerated="true">
       <module name="cotacao" />
       <QsMavenRunConfiguration>
@@ -113,8 +166,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="gateway-bff" type="QuarkusRunConfigurationType" factoryName="Quarkus" nameIsGenerated="true">
-      <module name="gateway-bff" />
+    <configuration name="gateway" type="QuarkusRunConfigurationType" factoryName="Quarkus">
+      <module name="gateway" />
       <QsMavenRunConfiguration>
         <MavenSettings>
           <option name="myGeneralSettings" />
@@ -134,7 +187,7 @@
                 <map />
               </option>
               <option name="resolveToWorkspace" value="false" />
-              <option name="workingDirPath" value="$PROJECT_DIR$/gateway-bff" />
+              <option name="workingDirPath" value="$PROJECT_DIR$/gateway" />
             </MavenRunnerParameters>
           </option>
         </MavenSettings>
@@ -212,6 +265,14 @@
       </deployment>
       <method v="2" />
     </configuration>
+    <configuration name="docker-compose.yaml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="docker-compose.yaml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <configuration name="docker-compose.yaml.localstack: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
@@ -225,8 +286,19 @@
       </deployment>
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Docker.docker-compose.yaml.localstack: Compose Deployment" />
+      <item itemvalue="Docker.docker-compose.yaml: Compose Deployment" />
+      <item itemvalue="JUnit.ProposalControllerTest.createProposalTest" />
+      <item itemvalue="Quarkus.gateway" />
+      <item itemvalue="Quarkus.cotacao" />
+      <item itemvalue="Quarkus.proposta" />
+      <item itemvalue="Quarkus.report" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ProposalControllerTest.createProposalTest" />
+        <item itemvalue="Docker.docker-compose.yaml: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yaml.localstack: Compose Deployment" />
       </list>
     </recent_temporary>
@@ -247,6 +319,9 @@
       <workItem from="1681993574086" duration="9384000" />
       <workItem from="1682086572390" duration="3188000" />
       <workItem from="1682174488456" duration="6395000" />
+      <workItem from="1683054906695" duration="17091000" />
+      <workItem from="1683131202944" duration="1443000" />
+      <workItem from="1683151658050" duration="16085000" />
     </task>
     <task id="LOCAL-00001" summary="Ajuste de erro de concorrência">
       <created>1681734749455</created>
@@ -304,7 +379,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682000203271</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Ajustando gateway">
+      <created>1682624222979</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1682624222979</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -346,31 +428,12 @@
     <MESSAGE value="Ajuste no desenho de arquitetura" />
     <MESSAGE value="Ajuste na imagem da arquitetura" />
     <MESSAGE value="Ajuste na ordem dos metodos para fins de apresentação" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajuste na ordem dos metodos para fins de apresentação" />
+    <MESSAGE value="Ajustando gateway" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajustando gateway" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/proposta/src/main/java/org/br/agro/controller/ProposalController.java</url>
-          <line>38</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/report/src/main/java/org/br/agro/message/KafkaEvent.java</url>
-          <line>30</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/cotacao/src/main/java/org/br/agro/domain/service/impl/QuotationServiceImpl.java</url>
-          <line>35</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/cotacao/src/main/java/org/br/agro/domain/service/impl/QuotationServiceImpl.java</url>
-          <line>47</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/cotacao/src/main/java/org/br/agro/domain/service/impl/QuotationServiceImpl.java</url>
           <line>67</line>
@@ -395,6 +458,11 @@
           <url>file://$PROJECT_DIR$/cotacao/src/main/java/org/br/agro/domain/service/impl/QuotationServiceImpl.java</url>
           <line>79</line>
           <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/proposta/src/test/java/org/br/agro/controller/ProposalControllerTest.java</url>
+          <line>69</line>
+          <option name="timeStamp" value="59" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

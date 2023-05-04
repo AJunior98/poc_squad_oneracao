@@ -10,7 +10,7 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>gateway-bff</module>
+        <module>gateway</module>
         <module>report</module>
         <module>proposta</module>
         <module>cotacao</module>
