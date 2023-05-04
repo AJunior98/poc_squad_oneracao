@@ -162,8 +162,44 @@ quarkus.log.console.format = %d{HH:mm:ss} %-5p traceId=%X{traceId}, parentId=%X{
 ```
 
 # Implementando testes unitários
+[EM_CONSTRUÇÃO]
 
 ## Prints do funcionamento da aplicação
+Abaixo os prints de como está funcionando a aplicação.
+
+# DynamoDB com LocalStack
+- Ao iniciar o LocalStack, você pode acompanhar os logs do mesmo via Docker-desktop.
+
+  ![image](https://user-images.githubusercontent.com/100853329/236321488-ef36dd44-7f41-46bc-a43b-578fcdec3b36.png)
+
+- Após criar a tabela, podemos acompanhar nos logs e ele retornará status 200 caso dê certo.
+
+  ![image](https://user-images.githubusercontent.com/100853329/236321545-14508adf-9138-4669-b88a-e945ec58b7a9.png)
+
+- Após a configuração do projeto, ele insere as cotações a cada 35s no banco, abaixo algumas imagens:
+
+  *Na imagem abaixo, estou escaneando uma lista para verificar se há alguma cotação salva no banco, caso contrário o código validará se o ultimo preço do dólar é diferente do atual encontrado, se sim ele salva*
+
+  ![image](https://user-images.githubusercontent.com/100853329/236322042-1e78a19c-0a15-479d-813a-92e211c83541.png)
+
+  *Imagem de alguns documentos salvos no banco*
+  
+  ![image](https://user-images.githubusercontent.com/100853329/236322105-f0858fad-a982-4718-9d9c-125d2b17f535.png)
+
+- Foram incluido alguns logs para acompanhamento a cada acontecimento importante, por exemplo, chamada do job e envio de mensagem para o tópico kafka:
+
+  ![image](https://user-images.githubusercontent.com/100853329/236322413-633edef4-785e-49cb-91ce-dd0d3f29d49b.png)
+
+## Configurações do DynamoDB no projeto
+- Existem algumas annotations para identificar os atributos do documento que você deseja guardar.
+
+![image](https://user-images.githubusercontent.com/100853329/236323459-42fe85af-acee-48c7-a05a-7cd5000b5604.png)
+
+- Implementação do repository 
+
+![image](https://user-images.githubusercontent.com/100853329/236323518-1e57f274-e4c3-4043-bd64-9d3d821d80e9.png)
+
+
 
 
 
