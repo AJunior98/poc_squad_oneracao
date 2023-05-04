@@ -8,16 +8,16 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="report" />
-        <module name="gateway-bff" />
         <module name="cotacao" />
         <module name="proposta" />
+        <module name="gateway" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="cotacao" options="-parameters" />
-      <module name="gateway-bff" options="-parameters" />
+      <module name="gateway" options="-parameters" />
       <module name="proposta" options="-parameters" />
       <module name="report" options="-parameters" />
     </option>

@@ -1,5 +1,6 @@
 package org.br.agro.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -11,6 +12,7 @@ import java.util.Date;
 @Table(name = "proposal")
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
 public class ProposalEntity {
 
     @Id

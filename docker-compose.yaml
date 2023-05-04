@@ -60,7 +60,7 @@ services:
       - "8180:8080"
       - "8443:8443"
     volumes:
-      - ./data:/opt/jboss/keycloak/standalone/data
+      - ./keycloak:/opt/jboss/keycloak/standalone/data
    
   jaeger:
     image: jaegertracing/all-in-one

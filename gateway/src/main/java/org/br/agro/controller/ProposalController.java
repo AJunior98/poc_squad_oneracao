@@ -33,7 +33,7 @@ public class ProposalController {
         int proposalRequestStatus = proposalService.createProposal(proposalDetails).getStatus();
 
         if(proposalRequestStatus > 199 || proposalRequestStatus < 205){
-            return Response.ok().build();
+            return Response.status(Response.Status.CREATED).build();
         } else {
             return Response.status(proposalRequestStatus).build();
         }

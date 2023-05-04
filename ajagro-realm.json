@@ -1,6 +1,6 @@
 {
   "id" : "36382947-8ffa-4a8a-9881-2b7eeb84f800",
-  "realm" : "quarkus",
+  "realm" : "ajagro",
   "notBefore" : 0,
   "defaultSignatureAlgorithm" : "RS256",
   "revokeRefreshToken" : false,

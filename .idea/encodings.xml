@@ -3,8 +3,8 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/cotacao/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cotacao/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/gateway-bff/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/gateway-bff/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gateway/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/proposta/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/proposta/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/report/src/main/java" charset="UTF-8" />
