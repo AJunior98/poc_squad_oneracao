@@ -4,28 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53f41b90-0d84-43e8-b5ee-e1435acd7c43" name="Changes" comment="Ajustando gateway">
-      <change afterPath="$PROJECT_DIR$/proposta/src/test/java/org/br/agro/controller/ProposalControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/proposta/src/test/java/org/br/agro/util/AccessTokenProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/proposta/src/test/resources/ajagro-realm.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="53f41b90-0d84-43e8-b5ee-e1435acd7c43" name="Changes" comment="Ajustando README">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_04_05_2023_15_56__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_04_05_2023_15_56__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configs/payload-teste.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/configs/quarkus-realm.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/kernel/process-uuid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/keycloak.lock.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/keycloak.mv.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/keycloak.trace.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/tx-object-store/ShadowNoFileLockStore/defaultStore/EISNAME/0_ffffac130002_5952fb4_64355461_20" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/org/br/agro/controller/ProposalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/org/br/agro/controller/ProposalController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proposta/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/proposta/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proposta/src/main/java/org/br/agro/controller/ProposalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/proposta/src/main/java/org/br/agro/controller/ProposalController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proposta/src/main/java/org/br/agro/dto/ProposalDetailsDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/proposta/src/main/java/org/br/agro/dto/ProposalDetailsDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proposta/src/main/java/org/br/agro/entity/ProposalEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/proposta/src/main/java/org/br/agro/entity/ProposalEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/proposta/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/proposta/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/report/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,31 +152,6 @@
     </configuration>
     <configuration name="gateway" type="QuarkusRunConfigurationType" factoryName="Quarkus">
       <module name="gateway" />
-      <QsMavenRunConfiguration>
-        <MavenSettings>
-          <option name="myGeneralSettings" />
-          <option name="myRunnerSettings" />
-          <option name="myRunnerParameters">
-            <MavenRunnerParameters>
-              <option name="profiles">
-                <set />
-              </option>
-              <option name="goals">
-                <list>
-                  <option value="quarkus:dev" />
-                </list>
-              </option>
-              <option name="pomFileName" value="pom.xml" />
-              <option name="profilesMap">
-                <map />
-              </option>
-              <option name="resolveToWorkspace" value="false" />
-              <option name="workingDirPath" value="$PROJECT_DIR$/gateway" />
-            </MavenRunnerParameters>
-          </option>
-        </MavenSettings>
-        <targetMavenLocalRepo />
-      </QsMavenRunConfiguration>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -300,6 +259,8 @@
         <item itemvalue="JUnit.ProposalControllerTest.createProposalTest" />
         <item itemvalue="Docker.docker-compose.yaml: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yaml.localstack: Compose Deployment" />
+        <item itemvalue="JUnit.ProposalControllerTest.createProposalTest" />
+        <item itemvalue="Docker.docker-compose.yaml: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -386,7 +347,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682624222979</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Ajustando README">
+      <created>1683227558436</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1683227558436</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -403,7 +371,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="Issue#2" />
+                        <option value="Sprint#2" />
                       </list>
                     </value>
                   </entry>
@@ -429,7 +397,8 @@
     <MESSAGE value="Ajuste na imagem da arquitetura" />
     <MESSAGE value="Ajuste na ordem dos metodos para fins de apresentação" />
     <MESSAGE value="Ajustando gateway" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajustando gateway" />
+    <MESSAGE value="Ajustando README" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajustando README" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
