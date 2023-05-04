@@ -2,77 +2,24 @@
 Um dos objetivos da Sprint 2, em relação a POC, era colocar mais algumas ferramentas em pratica, abaixo os conceitos que foram aplicados:
 - Integrar os microserviços desenvolvidos com o banco de dados
 - Realizar Tracing
-- Ter alguns cenarios de teste e logs
+- Ter cenarios de teste e logs
 
-# Desenho de arquitetura proposto
+# Modificações na arquitetura principal
+Não houve mudanças relevantes em relação ao primeiro desenho proposto, abaixo os detalhes das modificações realizadas:
+- O banco Postgresql foi substituido pelo banco DynamoDB
 
-![image](https://user-images.githubusercontent.com/100853329/236301045-0b44b674-6c09-4a3e-9385-aa52d5e93c12.png)
+![image](https://user-images.githubusercontent.com/100853329/236307534-a50332cf-e668-4c54-b5c8-cb8a2cc7092a.png)
+
+- Para realização de tracing, foi adicionado ao projeto o Jaeger
+
+![image](https://user-images.githubusercontent.com/100853329/236309783-3ac77f37-0119-40ac-8f90-9c89d6c3c7ad.png)
 
 ## Docker Compose
 Para rodar o projeto, deve-se rodar o compose abaixo:
 ```
 version: '3'
 
-services:
-  zookeeper:
-    image: confluentinc/cp-zookeeper:latest
-    container_name: zookeeper
-    networks:
-      - broker-kafka
-    environment:
-      ZOOKEEPER_CLIENT_PORT: 2181
-      ZOOKEEPER_TICK_TIME: 2000
-
-  kafka:
-    image: confluentinc/cp-kafka:latest
-    container_name: kafka
-    networks:
-      - broker-kafka
-    depends_on:
-      - zookeeper
-    ports:
-      - "9092:9092"
-    environment:
-      KAFKA_BROKER_ID: 1
-      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
-      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:29092,PLAINTEXT_HOST://localhost:9092
-      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
-      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
-      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
-
-  kafdrop:
-    image: obsidiandynamics/kafdrop:latest
-    container_name: kafdrop
-    networks:
-      - broker-kafka
-    depends_on:
-      - kafka
-    ports:
-      - "19000:9000"
-    environment:
-      KAFKA_BROKERCONNECT: kafka:29092
-
-  postgres:
-    image: 'postgres:13.1-alpine'
-    container_name: postgres
-    ports:
-      - 5432:5432
-    environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=1234
-      
-  keycloak:
-    image: jboss/keycloak
-    container_name: keycloak
-    environment:
-      - KEYCLOAK_USER=admin
-      - KEYCLOAK_PASSWORD=admin
-    ports:
-      - "8180:8080"
-      - "8443:8443"
-    volumes:
-      - ./data:/opt/jboss/keycloak/standalone/data
-   
+services:   
   jaeger:
     image: jaegertracing/all-in-one
     container_name: jaeger
@@ -92,10 +39,6 @@ services:
       - DATA_DIR=/tmp/localstack/data
     volumes:
       - "./localstack:/tmp/localstack"
-
-networks:
-  broker-kafka:
-    driver: bridge
 ```
 # Implementando LocalStack
 A ideia desta Issue, era implementar o DynamoDB utilizando o LocalStack, abaixo o passo a passo de como deve ser feito para utilização:
@@ -148,7 +91,6 @@ awslocal dynamodb delete-table --table-name <NOME_DA_SUA_TABELA>
 ```
 awslocal dynamodb scan --table-name <NOME_DA_SUA_TABELA> --limit 10
 ```
-
 ## POM - Dependências e configs do DynamoDB
 Abaixo as dependências, repositorio e configurações utilizadas.
 ```
@@ -200,6 +142,26 @@ Abaixo as dependências, repositorio e configurações utilizadas.
 
 ## Como implementar o DynamoDB no código?
 Para facilitar a vida de quem quer entender como funciona, a arquitetura utilizada para conectar no Dynamo está no pacote de Infra do microserviço de cotação, todas as anotações e configurações da AWS estão presentes neste pacote.
+
+#Implementando Jaeger
+Para fazer a implementação do Jaeger, bastas adicionar as dependências de opentrancing no projeto, adicionar a configuração do Jaeger no properties e inserir a anotação "@Traced" nas classes que serão observadas (normalmente é inserido nos services), abaixo detalhes:
+- Dependências utilizadas
+```
+<dependency>
+    <groupId>io.quarkus</groupId>
+    <artifactId>quarkus-smallrye-opentracing</artifactId>
+</dependency>
+```
+- As configurações que são utilizadas no application.properties, são padrões em todo projeto, devendo somente incluir o nome do microserviço
+```
+# open-tracing
+quarkus.jaeger.service-name = <NOME_DO_MICRO_SERVIÇO>
+quarkus.jaeger.sampler-type = const
+quarkus.jaeger.sampler-param = 1
+quarkus.log.console.format = %d{HH:mm:ss} %-5p traceId=%X{traceId}, parentId=%X{parentId}, spanId=%X{spanId}, sampled=%X{sampled} [%c{2.}] (%t) %s%e%n
+```
+
+# Implementando testes unitários
 
 ## Prints do funcionamento da aplicação
 
