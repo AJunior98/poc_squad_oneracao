@@ -259,6 +259,10 @@ Foi realizado alguns testes afim de colocar em pratica os conceitos de mock, mem
 
 ![image](https://user-images.githubusercontent.com/100853329/236452441-7598ca9a-40d4-48f2-8054-0895e160f99a.png)
 
+- Todos os testes eu realizei com um banco em memoria, ou seja, quando eu persistir um dado no cenario de teste, quando o teste finalizar ele deleta o dado, abaixo as configurações utilizadas
+
+![image](https://user-images.githubusercontent.com/100853329/236453369-4fe5c9bd-4cb6-4cf3-b622-5a916fe5a7b9.png)
+
 - Há um recurso no IntelliJ chamado coverage, que ajuda e entender quantos % da classe você conseguiu testar
 
 ![image](https://user-images.githubusercontent.com/100853329/236452546-a72cd402-2c16-4afd-ba9c-4948a47de14f.png)
