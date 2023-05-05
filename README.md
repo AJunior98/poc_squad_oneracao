@@ -1,4 +1,4 @@
-# Sistema de gerenciamente de agronegocio - Squad Oneração (Proof of Concept)
+# Sistema de gerenciamente de agronegocio - Squad Oneração (Proof of Concept) - Sprint 1
 Está POC tem como objetivo colocar em pratica algumas possiveis ferramentas que serão utilizadas no decorrer do desenvolvimento do microserviço de Gestão de Risco/Oneração.
 
 ## Ferramentas utilizadas
