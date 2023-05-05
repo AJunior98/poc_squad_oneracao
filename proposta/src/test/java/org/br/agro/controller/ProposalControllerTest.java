@@ -10,6 +10,7 @@ import org.br.agro.repository.ProposalRepository;
 import org.br.agro.util.AccessTokenProvider;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 
 import javax.inject.Inject;
@@ -46,6 +47,7 @@ class ProposalControllerTest extends AccessTokenProvider {
 
     @Test
     @DisplayName("Should create a proposal successfully")
+    @Order(1)
     public void createProposalTest() {
         Response response =
                 given()

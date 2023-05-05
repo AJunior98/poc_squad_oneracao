@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53f41b90-0d84-43e8-b5ee-e1435acd7c43" name="Changes" comment="Ajustando README">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_04_05_2023_15_56__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_04_05_2023_15_56__Changes_.xml" afterDir="false" />
+    <list default="true" id="53f41b90-0d84-43e8-b5ee-e1435acd7c43" name="Changes" comment="Ajustes nas configurações do projeto">
+      <change afterPath="$PROJECT_DIR$/proposta/src/test/java/org/br/agro/service/impl/ProposalServiceImplTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/keycloak/keycloak.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/keycloak/keycloak.mv.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proposta/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/proposta/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proposta/src/main/java/org/br/agro/dto/ProposalDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/proposta/src/main/java/org/br/agro/dto/ProposalDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/proposta/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/proposta/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/report/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proposta/src/test/java/org/br/agro/controller/ProposalControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/proposta/src/test/java/org/br/agro/controller/ProposalControllerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,15 +21,15 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="Sprint#2" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -88,6 +90,7 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="org.br.agro.service.impl" />
       <recent name="org.br.agro.controller" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -107,6 +110,74 @@
       <option name="PACKAGE_NAME" value="org.br.agro.controller" />
       <option name="MAIN_CLASS_NAME" value="org.br.agro.controller.ProposalControllerTest" />
       <option name="METHOD_NAME" value="createProposalTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProposalServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="proposta" />
+      <shortenClasspath name="ARGS_FILE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.br.agro.service.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.br.agro.service.impl" />
+      <option name="MAIN_CLASS_NAME" value="org.br.agro.service.impl.ProposalServiceImplTest" />
+      <option name="METHOD_NAME" value="testFindFullProposal" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProposalServiceImplTest.testCreateNewProposal" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="proposta" />
+      <shortenClasspath name="ARGS_FILE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.br.agro.service.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.br.agro.service.impl" />
+      <option name="MAIN_CLASS_NAME" value="org.br.agro.service.impl.ProposalServiceImplTest" />
+      <option name="METHOD_NAME" value="testCreateNewProposal" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProposalServiceImplTest.testFindFullProposal" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="proposta" />
+      <shortenClasspath name="ARGS_FILE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.br.agro.service.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.br.agro.service.impl" />
+      <option name="MAIN_CLASS_NAME" value="org.br.agro.service.impl.ProposalServiceImplTest" />
+      <option name="METHOD_NAME" value="testFindFullProposal" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProposalServiceImplTest.testRemoveProposal" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="proposta" />
+      <shortenClasspath name="ARGS_FILE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.br.agro.service.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.br.agro.service.impl" />
+      <option name="MAIN_CLASS_NAME" value="org.br.agro.service.impl.ProposalServiceImplTest" />
+      <option name="METHOD_NAME" value="testRemoveProposal" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -152,6 +223,31 @@
     </configuration>
     <configuration name="gateway" type="QuarkusRunConfigurationType" factoryName="Quarkus">
       <module name="gateway" />
+      <QsMavenRunConfiguration>
+        <MavenSettings>
+          <option name="myGeneralSettings" />
+          <option name="myRunnerSettings" />
+          <option name="myRunnerParameters">
+            <MavenRunnerParameters>
+              <option name="profiles">
+                <set />
+              </option>
+              <option name="goals">
+                <list>
+                  <option value="quarkus:dev" />
+                </list>
+              </option>
+              <option name="pomFileName" value="pom.xml" />
+              <option name="profilesMap">
+                <map />
+              </option>
+              <option name="resolveToWorkspace" value="false" />
+              <option name="workingDirPath" value="$PROJECT_DIR$/gateway" />
+            </MavenRunnerParameters>
+          </option>
+        </MavenSettings>
+        <targetMavenLocalRepo />
+      </QsMavenRunConfiguration>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -224,30 +320,11 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="docker-compose.yaml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="sourceFilePath" value="docker-compose.yaml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
-    <configuration name="docker-compose.yaml.localstack: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="services">
-            <list>
-              <option value="localstack" />
-            </list>
-          </option>
-          <option name="sourceFilePath" value="docker-compose.yaml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
     <list>
-      <item itemvalue="Docker.docker-compose.yaml.localstack: Compose Deployment" />
-      <item itemvalue="Docker.docker-compose.yaml: Compose Deployment" />
+      <item itemvalue="JUnit.ProposalServiceImplTest" />
+      <item itemvalue="JUnit.ProposalServiceImplTest.testCreateNewProposal" />
+      <item itemvalue="JUnit.ProposalServiceImplTest.testFindFullProposal" />
+      <item itemvalue="JUnit.ProposalServiceImplTest.testRemoveProposal" />
       <item itemvalue="JUnit.ProposalControllerTest.createProposalTest" />
       <item itemvalue="Quarkus.gateway" />
       <item itemvalue="Quarkus.cotacao" />
@@ -257,10 +334,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.ProposalControllerTest.createProposalTest" />
-        <item itemvalue="Docker.docker-compose.yaml: Compose Deployment" />
-        <item itemvalue="Docker.docker-compose.yaml.localstack: Compose Deployment" />
-        <item itemvalue="JUnit.ProposalControllerTest.createProposalTest" />
-        <item itemvalue="Docker.docker-compose.yaml: Compose Deployment" />
+        <item itemvalue="JUnit.ProposalServiceImplTest" />
+        <item itemvalue="JUnit.ProposalServiceImplTest.testCreateNewProposal" />
+        <item itemvalue="JUnit.ProposalServiceImplTest.testRemoveProposal" />
+        <item itemvalue="JUnit.ProposalServiceImplTest.testFindFullProposal" />
       </list>
     </recent_temporary>
   </component>
@@ -283,6 +360,7 @@
       <workItem from="1683054906695" duration="17091000" />
       <workItem from="1683131202944" duration="1443000" />
       <workItem from="1683151658050" duration="16085000" />
+      <workItem from="1683286798766" duration="1601000" />
     </task>
     <task id="LOCAL-00001" summary="Ajuste de erro de concorrência">
       <created>1681734749455</created>
@@ -404,11 +482,6 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/cotacao/src/main/java/org/br/agro/domain/service/impl/QuotationServiceImpl.java</url>
-          <line>67</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/cotacao/src/main/java/org/br/agro/infra/config/AmazonDynamoDBConfiguration.java</url>
           <line>27</line>
           <option name="timeStamp" value="16" />
@@ -424,16 +497,27 @@
           <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/cotacao/src/main/java/org/br/agro/domain/service/impl/QuotationServiceImpl.java</url>
-          <line>79</line>
-          <option name="timeStamp" value="20" />
+          <url>file://$PROJECT_DIR$/proposta/src/main/java/org/br/agro/service/impl/ProposalServiceImpl.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="62" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/proposta/src/test/java/org/br/agro/controller/ProposalControllerTest.java</url>
-          <line>69</line>
-          <option name="timeStamp" value="59" />
+          <url>file://$PROJECT_DIR$/proposta/src/main/java/org/br/agro/service/impl/ProposalServiceImpl.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="73" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/poc_squad_oneracao$ProposalControllerTest_createProposalTest.ic" NAME="ProposalControllerTest.createProposalTest Coverage Results" MODIFIED="1683288094756" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>org.br.agro.controller.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/poc_squad_oneracao$ProposalServiceImplTest_testFindFullProposal.ic" NAME="ProposalServiceImplTest.testFindFullProposal Coverage Results" MODIFIED="1683251966525" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>org.br.agro.service.impl.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/poc_squad_oneracao$ProposalServiceImplTest.ic" NAME="ProposalServiceImplTest Coverage Results" MODIFIED="1683287840842" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>org.br.agro.service.impl.*</FILTER>
+    </SUITE>
   </component>
 </project>
