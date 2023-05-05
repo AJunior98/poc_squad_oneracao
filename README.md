@@ -143,7 +143,7 @@ Abaixo as dependências, repositorio e configurações utilizadas.
 ## Como implementar o DynamoDB no código?
 Para facilitar a vida de quem quer entender como funciona, a arquitetura utilizada para conectar no Dynamo está no pacote de Infra do microserviço de cotação, todas as anotações e configurações da AWS estão presentes neste pacote.
 
-#Implementando Jaeger
+# Implementando Jaeger
 Para fazer a implementação do Jaeger, bastas adicionar as dependências de opentrancing no projeto, adicionar a configuração do Jaeger no properties e inserir a anotação "@Traced" nas classes que serão observadas (normalmente é inserido nos services), abaixo detalhes:
 - Dependências utilizadas
 ```
