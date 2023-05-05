@@ -160,10 +160,6 @@ quarkus.jaeger.sampler-type = const
 quarkus.jaeger.sampler-param = 1
 quarkus.log.console.format = %d{HH:mm:ss} %-5p traceId=%X{traceId}, parentId=%X{parentId}, spanId=%X{spanId}, sampled=%X{sampled} [%c{2.}] (%t) %s%e%n
 ```
-
-# Implementando testes unitários
-[EM_CONSTRUÇÃO]
-
 # Prints do funcionamento da aplicação
 Abaixo os prints de como está funcionando a aplicação.
 
@@ -236,15 +232,33 @@ Basicamente o Jaeger está olhando para o gateway e os 2 microserviços (propost
   
   ![image](https://user-images.githubusercontent.com/100853329/236328383-07434385-af92-4cb2-803e-bc0c81ef5155.png)
 
+# Implementando testes unitários
+Foi realizado alguns testes afim de colocar em pratica os conceitos de mock, memoria e afins, abaixo alguns prints e dependências utilizadas: 
+- Dependências utilizadas para testes unitários
+```
+<dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-junit5</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-jdbc-h2</artifactId>
+        </dependency>
+```
+- No cenario abaixo, foi realizado os testes na camada de serviço
 
+![image](https://user-images.githubusercontent.com/100853329/236451520-5c03bde7-ca2a-4b46-848c-e073844aebb9.png)
 
+- No cenario de testes abaixo, foi testado a camada de controller
 
+![image](https://user-images.githubusercontent.com/100853329/236452441-7598ca9a-40d4-48f2-8054-0895e160f99a.png)
 
+- Há um recurso no IntelliJ chamado coverage, que ajuda e entender quantos % da classe você conseguiu testar
 
-
-
-
-
-
-
-
+![image](https://user-images.githubusercontent.com/100853329/236452546-a72cd402-2c16-4afd-ba9c-4948a47de14f.png)
